@@ -1,0 +1,8 @@
+name = "aprsfi"
+main = "index.js"
+compatibility_date = "2024-06-10"
+account_id = "6bce1ffb042bcfffe0c35b914b969a26"
+
+# Variables are referenced via env.VARIABLE_NAME in the worker
+# Set these with: echo "value" | npx wrangler secret put VARIABLE_NAME
+# Or locally in .dev.vars file for development

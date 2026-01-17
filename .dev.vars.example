@@ -1,0 +1,4 @@
+# Copy this file to .dev.vars and add your APRS.fi API key
+# Get your API key at: https://aprs.fi/page/api
+
+APRS_API_KEY=your-api-key-here

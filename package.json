@@ -1,0 +1,32 @@
+{
+  "name": "aprsfi-proxy",
+  "version": "1.0.0",
+  "description": "A secure, production-ready Cloudflare Worker that proxies requests to the APRS.fi API with CORS, caching, and error handling",
+  "main": "index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "secret": "wrangler secret put APRS_API_KEY"
+  },
+  "keywords": [
+    "aprs",
+    "aprs.fi",
+    "amateur-radio",
+    "ham-radio",
+    "cloudflare-workers",
+    "proxy",
+    "api",
+    "telemetry",
+    "weather",
+    "gps-tracking"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.59.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
