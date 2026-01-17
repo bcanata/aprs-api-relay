@@ -1,6 +1,6 @@
 /**
- * APRS.fi API Proxy
- * A Cloudflare Worker that securely proxies requests to the APRS.fi API
+ * APRS API Relay
+ * A Cloudflare Worker that securely relays requests to the APRS.fi API
  */
 
 // CORS headers for web clients
@@ -30,7 +30,7 @@ function handleOptions() {
 function handleHealth() {
     return new Response(JSON.stringify({
         status: 'healthy',
-        service: 'aprsfi-proxy',
+        service: 'aprs-api-relay',
         version: '1.0.0',
         timestamp: new Date().toISOString(),
     }), {
@@ -48,7 +48,7 @@ function handleHealth() {
 function errorResponse(message, status = 500) {
     return new Response(JSON.stringify({
         error: message,
-        service: 'aprsfi-proxy',
+        service: 'aprs-api-relay',
     }), {
         status,
         headers: {
@@ -134,7 +134,7 @@ async function handleRequest(request, env, ctx) {
         const response = await fetch(apiUrl, {
             signal: controller.signal,
             headers: {
-                'User-Agent': 'aprsfi-proxy/1.0.0 (Cloudflare Worker)',
+                'User-Agent': 'aprs-api-relay/1.0.0 (Cloudflare Worker)',
             },
         }).finally(() => clearTimeout(timeoutId));
 

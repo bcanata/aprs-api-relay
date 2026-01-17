@@ -1,8 +1,8 @@
-# APRS.fi API Proxy
+# APRS API Relay
 
-> A secure, production-ready Cloudflare Worker that proxies requests to the APRS.fi API
+> A secure, production-ready Cloudflare Worker that relays requests to the APRS.fi API
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/bcanata/aprsfi)
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/bcanata/aprs-api-relay)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-orange)](https://workers.cloudflare.com/)
@@ -41,14 +41,14 @@ Click the Deploy button above. You'll need to:
 2. Set the `APRS_API_KEY` secret (get your key at [aprs.fi](https://aprs.fi/page/api))
 3. Deploy!
 
-That's it - your worker will be live at `https://aprsfi.your-subdomain.workers.dev`
+That's it - your worker will be live at `https://your-worker.workers.dev`
 
 ### Manual Deployment
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/aprsfi.git
-cd aprsfi
+git clone https://github.com/bcanata/aprs-api-relay.git
+cd aprs-api-relay
 
 # Install dependencies
 npm install
